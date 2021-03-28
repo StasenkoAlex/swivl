@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <base href="/"> -->
+
+    <title>SWIVL</title>
+    <meta name="description" content="Synth" />
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/dist/preview.jpg" />
+
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header_container container">
+        <div class="header_top">
+          <a href="/" class="header_top-logo">
+            <img src="/images/dist/logo.svg" alt="Swivl logo" />
+          </a>
+          <div class="header_top-info">
+            <div class="header-top-profile header_profile">
+              <div class="header_profile-name">Arthur Wood</div>
+              <img
+                src="/images/dist/avatar.jpeg"
+                srcset="/images/dist/avatar@2x.jpeg 2x"
+                alt="Arthur"
+                class="header_profile-avatar"
+              />
+              <svg class="icon icon--sm">
+                <use xlink:href="/images/dist/icons.svg#arrow_down"></use>
+              </svg>
+            </div>
+            <div class="header_top-links">
+              <a href="/" class="header_top-links-item">
+                <!-- <svg class="icon">
+                  <use xlink:href="/images/dist/icons.svg#notifications"></use>
+                </svg> -->
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="notifications" opacity="0.98">
+                    <rect
+                      id="Rectangle 2 Copy 3"
+                      opacity="0.01"
+                      width="32"
+                      height="32"
+                      fill="#EFF3F6"
+                    />
+                    <g id="Shape">
+                      <mask id="path-2-inside-1" fill="white">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M17.6471 22.4C17.6471 23.28 16.9059 24 16 24C15.0941 24 14.3529 23.28 14.3529 22.4H15.6471H16H16.3529H17.6471ZM16 11.512L15.2133 11.693C13.6977 12.0419 12.6471 13.336 12.6471 14.8V19.2V19.6H20.9644L21.3529 19.2L21.7647 19.6L23 20.8V21.6H22.2229H21H20.9532H11.0468H11H9.77714H9V20.8L10.2353 19.6L10.6471 19.2V14.8C10.6471 12.344 12.4012 10.288 14.7647 9.744V9.2C14.7647 8.536 15.3165 8 16 8C16.6835 8 17.2353 8.536 17.2353 9.2V9.744C19.5988 10.288 21.3529 12.344 21.3529 14.8V19.2H19.3529V14.8C19.3529 13.336 18.3023 12.0419 16.7867 11.693L16 11.512Z"
+                        />
+                      </mask>
+                      <path
+                        d="M17.6471 22.4H19.6471V20.4H17.6471V22.4ZM14.3529 22.4V20.4H12.3529V22.4H14.3529ZM15.2133 11.693L15.6619 13.6421H15.6619L15.2133 11.693ZM16 11.512L16.4486 9.56293L16 9.45968L15.5514 9.56293L16 11.512ZM12.6471 19.6H10.6471V21.6H12.6471V19.6ZM20.9644 19.6V21.6H21.8098L22.3989 20.9936L20.9644 19.6ZM21.7647 19.6L20.3711 21.0346L21.7647 19.6ZM23 20.8H25V19.9545L24.3936 19.3654L23 20.8ZM23 21.6V23.6H25V21.6H23ZM9 21.6H7V23.6H9V21.6ZM9 20.8L7.60643 19.3654L7 19.9545V20.8H9ZM10.2353 19.6L8.84172 18.1654H8.84172L10.2353 19.6ZM10.6471 19.2L12.0406 20.6346L12.6471 20.0455V19.2H10.6471ZM14.7647 9.744L15.2133 11.693L16.7647 11.336V9.744H14.7647ZM17.2353 9.744H15.2353V11.336L16.7867 11.693L17.2353 9.744ZM19.3529 19.2H17.3529V21.2H19.3529V19.2ZM16.7867 11.693L16.3381 13.6421H16.3381L16.7867 11.693ZM16 26C17.9554 26 19.6471 24.4388 19.6471 22.4H15.6471C15.6471 22.1212 15.8564 22 16 22V26ZM12.3529 22.4C12.3529 24.4388 14.0446 26 16 26V22C16.1436 22 16.3529 22.1212 16.3529 22.4H12.3529ZM15.6471 20.4H14.3529V24.4H15.6471V20.4ZM16 20.4H15.6471V24.4H16V20.4ZM16.3529 20.4H16V24.4H16.3529V20.4ZM17.6471 20.4H16.3529V24.4H17.6471V20.4ZM15.6619 13.6421L16.4486 13.461L15.5514 9.56293L14.7647 9.744L15.6619 13.6421ZM14.6471 14.8C14.6471 14.3205 15.0019 13.794 15.6619 13.6421L14.7647 9.744C12.3935 10.2898 10.6471 12.3515 10.6471 14.8H14.6471ZM14.6471 19.2V14.8H10.6471V19.2H14.6471ZM14.6471 19.6V19.2H10.6471V19.6H14.6471ZM20.9644 17.6H12.6471V21.6H20.9644V17.6ZM19.9184 17.8064L19.5298 18.2064L22.3989 20.9936L22.7875 20.5936L19.9184 17.8064ZM23.1583 18.1654L22.7465 17.7654L19.9594 20.6346L20.3711 21.0346L23.1583 18.1654ZM24.3936 19.3654L23.1583 18.1654L20.3711 21.0346L21.6064 22.2346L24.3936 19.3654ZM25 21.6V20.8H21V21.6H25ZM22.2229 23.6H23V19.6H22.2229V23.6ZM21 23.6H22.2229V19.6H21V23.6ZM20.9532 23.6H21V19.6H20.9532V23.6ZM11.0468 23.6H20.9532V19.6H11.0468V23.6ZM11 23.6H11.0468V19.6H11V23.6ZM9.77714 23.6H11V19.6H9.77714V23.6ZM9 23.6H9.77714V19.6H9V23.6ZM7 20.8V21.6H11V20.8H7ZM8.84172 18.1654L7.60643 19.3654L10.3936 22.2346L11.6289 21.0346L8.84172 18.1654ZM9.25349 17.7654L8.84172 18.1654L11.6289 21.0346L12.0406 20.6346L9.25349 17.7654ZM8.64706 14.8V19.2H12.6471V14.8H8.64706ZM14.3161 7.79496C11.1046 8.53413 8.64706 11.352 8.64706 14.8H12.6471C12.6471 13.336 13.6977 12.0419 15.2133 11.693L14.3161 7.79496ZM12.7647 9.2V9.744H16.7647V9.2H12.7647ZM16 6C14.2669 6 12.7647 7.37718 12.7647 9.2H16.7647C16.7647 9.69482 16.366 10 16 10V6ZM19.2353 9.2C19.2353 7.37718 17.7331 6 16 6V10C15.634 10 15.2353 9.69482 15.2353 9.2H19.2353ZM19.2353 9.744V9.2H15.2353V9.744H19.2353ZM23.3529 14.8C23.3529 11.352 20.8954 8.53413 17.6839 7.79496L16.7867 11.693C18.3023 12.0419 19.3529 13.336 19.3529 14.8H23.3529ZM23.3529 19.2V14.8H19.3529V19.2H23.3529ZM19.3529 21.2H21.3529V17.2H19.3529V21.2ZM17.3529 14.8V19.2H21.3529V14.8H17.3529ZM16.3381 13.6421C16.9981 13.794 17.3529 14.3205 17.3529 14.8H21.3529C21.3529 12.3515 19.6065 10.2898 17.2353 9.744L16.3381 13.6421ZM15.5514 13.461L16.3381 13.6421L17.2353 9.744L16.4486 9.56293L15.5514 13.461Z"
+                        mask="url(#path-2-inside-1)"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="/" class="header_top-links-item">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity=".98">
+                    <path opacity=".01" fill="#EFF3F6" d="M0 0h32v32H0z" />
+                    <rect
+                      x="10"
+                      y="12"
+                      width="12"
+                      height="10"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M12.4244 12.4713c1.0812.3935 3.047.1561 3.4248-.8818.3778-1.038-.9755-2.4834-2.0567-2.877-1.0812-.3935-2.2639.129-2.6417 1.1669-.3778 1.0379.1924 2.1984 1.2736 2.5919z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M19.5756 12.4713c-1.0812.3935-3.047.1561-3.4248-.8818-.3778-1.038.9755-2.4834 2.0567-2.877 1.0812-.3935 2.2639.129 2.6417 1.1669.3778 1.0379-.1924 2.1984-1.2736 2.5919z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path fill="currentColor" d="M15 12h2v10h-2z" />
+                    <g fill="#fff">
+                      <mask id="a">
+                        <path
+                          d="M8 13c0-1.1046.8954-2 2-2h12c1.1046 0 2 .8954 2 2v3c0 .5523-.4477 1-1 1H9c-.5523 0-1-.4477-1-1v-3z"
+                        />
+                      </mask>
+                      <path
+                        d="M8 13c0-1.1046.8954-2 2-2h12c1.1046 0 2 .8954 2 2v3c0 .5523-.4477 1-1 1H9c-.5523 0-1-.4477-1-1v-3z"
+                        stroke="currentColor"
+                        stroke-width="4"
+                        mask="url(#a)"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="/" class="header_top-links-item">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path opacity=".01" fill="#EFF3F6" d="M0 0h32v32H0z" />
+                  <path
+                    d="M9.8973 11.652a.6423.6423 0 00-.2017-.535l-1.494-1.8419V9h4.6387l3.5855 8.0476L19.578 9H24v.2751l-1.2773 1.2534a.3864.3864 0 00-.1419.3669v9.2092a.3864.3864 0 00.1419.3669l1.2474 1.2534V22h-6.2745v-.2751l1.2923-1.284c.1269-.1299.1269-.1681.1269-.3668v-7.4439l-3.5929 9.3392h-.4855l-4.183-9.3392v6.2593a.876.876 0 00.2316.7184l1.6806 2.0864v.2751H8v-.2751l1.6807-2.0864a.8456.8456 0 00.2166-.7184V11.652z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="header_nav nav">
+          <a href="/" class="nav_item is-active">Feed</a>
+          <a href="/" class="nav_item">Explore</a>
+          <a href="/" class="nav_item">Discussions</a>
+        </nav>
+        <button class="header_add btn" type="button">
+          <svg class="btn_icon icon icon--md">
+            <use xlink:href="/images/dist/icons.svg#plus"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="profile">
+      <div class="container">
+        <div class="profile_grid">
+          <div class="profile_info">
+            <div class="profile_card">
+              <img
+                src="/images/dist/main_avatar.jpeg"
+                srcset="/images/dist/main_avatar@2x.jpeg 2x"
+                alt="Benjamin"
+                class="profile_card-img"
+              />
+              <div class="profile_card-info">
+                <h2 class="profile_card-name">Benjamin Clementine</h2>
+                <div class="profile_card-nick">@benclementine</div>
+                <button class="link-btn" type="button">
+                  <svg
+                    class="icon icon--md"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.8963 3.4142c.7811-.781 2.0474-.781 2.8285 0l2.8284 2.8284c.781.781.781 2.0474 0 2.8285l-6.9484 6.9484a.4998.4998 0 01-.3066.1442l-3.7157.3506c-1.2604.1189-2.3128-.9483-2.1762-2.2069l.3953-3.6424a.5.5 0 01.1435-.2996l6.9512-6.9512zm.7064 2.1221c.3905-.3905 1.0236-.3905 1.4142 0l1.4142 1.4142c.3905.3906.3905 1.0237 0 1.4142l-.7079.708-2.8284-2.8285.7079-.7079zm-2.123 2.1229l-3.5369 3.537-.4138 2.0653c-.1403.6999.477 1.3172 1.177 1.1769l2.0652-.4138 3.537-3.537-2.8284-2.8284z"
+                    />
+                  </svg>
+
+                  <span class="link-btn_text">Edit profile</span>
+                </button>
+                <div class="profile_card-menu dropdown">
+                  <i class="dropdown_icon">
+                    <img src="/images/dist/icons.svg#dots" alt="" />
+                  </i>
+                  <div class="dropdown_content">
+                    <div class="dropdown_list">
+                      <a href="" class="dropdown_list-item">
+                        <svg
+                          class="dropdown_list-item-icon"
+                          width="20"
+                          height="20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            opacity=".01"
+                            fill="#C3CADF"
+                            d="M0 0h20v20H0z"
+                          />
+                          <path
+                            d="M4 17c-1.1046 0-2-.8954-2-2V3c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2v1"
+                            stroke="#3E4056"
+                            stroke-width="2"
+                          />
+                          <rect
+                            x="5"
+                            y="4"
+                            width="8"
+                            height="2"
+                            rx="1"
+                            fill="#3E4056"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M5 9c0-.5523.4477-1 1-1h4l-2 2H6c-.5523 0-1-.4477-1-1zM13.8933 6.9276c.781-.781 2.0474-.781 2.8284 0l2.8284 2.8285c.7811.781.7811 2.0473 0 2.8284l-6.9437 6.9437a.5.5 0 01-.3067.1442l-3.715.3495c-1.26.1186-2.3119-.9482-2.1757-2.2064l.3943-3.6416a.5003.5003 0 01.1435-.2998l6.9465-6.9465zm.7071 2.1214c.3905-.3906 1.0237-.3906 1.4142 0l1.4142 1.4142c.3905.3905.3905 1.0237 0 1.4142l-.7071.7071-2.8284-2.8284.7071-.7071zm-2.1213 2.1213l-3.535 3.535-.4133 2.0649c-.14.6998.477 1.3168 1.1768 1.1767l2.0649-.4132 3.535-3.535-2.8284-2.8284z"
+                            fill="#3E4056"
+                          />
+                        </svg>
+                        <span class="dropdown_item-title">Report User</span>
+                      </a>
+                      <a href="" class="dropdown_list-item">
+                        <svg
+                          class="dropdown_list-item-icon"
+                          width="20"
+                          height="20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.9497 14.9497c-2.7336 2.7337-7.1658 2.7337-9.8994 0-2.7337-2.7336-2.7337-7.1658 0-9.8994 2.7336-2.7337 7.1658-2.7337 9.8994 0 2.7337 2.7336 2.7337 7.1658 0 9.8994zM7 13l6-6M13 13L7 7"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          />
+                        </svg>
+                        <span class="dropdown_item-title">Block User</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="profile_statistic">
+              <li class="profile_statistic-item">
+                <span class="number">45</span>
+                synths
+              </li>
+              <li class="profile_statistic-item">
+                <span class="number">110</span>
+                followers
+              </li>
+              <li class="profile_statistic-item">
+                <span class="number">332</span>
+                following
+              </li>
+            </ul>
+            <p class="profile_about">
+              Cryptocurrencies including Ethereum, Ripple, and Litecoin have all
+              plunged between 20 to 30 percent each, according to CoinMarketCap.
+              Here is the latest Ripple price news and live updates on XRP,
+              bitcoin and Ethereum.
+            </p>
+          </div>
+          <section class="profile_content">
+            <div class="profile_content-switcher">
+              <label for="1">Public</label>
+              <div class="checkbox">
+                <input type="checkbox" id="1" />
+                <label class="checkbox_label" for="1"></label>
+              </div>
+              <label for="1">Private</label>
+            </div>
+            <div class="profile_content-posts">
+              <article class="card">
+                <div class="card_text">
+                  New air routes that promise cheap flights in
+                </div>
+                <div class="card_bottom">
+                  <div class="card_bottom-author">
+                    <span class="card_avatar img-placeholder"></span>
+                    <span>Gregory Watkins</span>
+                  </div>
+                  <div class="card_bottom-actions">
+                    <a href="" class="card_bottom-share">Share</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card_text">
+                  New air routes that promise cheap flights in
+                </div>
+                <div class="card_bottom">
+                  <div class="card_bottom-author">
+                    <span class="card_avatar img-placeholder"></span>
+                    <span>Gregory Watkins</span>
+                  </div>
+                  <div class="card_bottom-actions">
+                    <a href="" class="card_bottom-share">Share</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card card--withtop">
+                <div class="card_top">
+                  <div class="card_top-share">Shared to</div>
+                  <div class="card_top-hash">
+                    #discussionaboutanimgttddsnaboutanimgttdd
+                  </div>
+                </div>
+                <div class="card_text">
+                  New air routes that promise cheap flights in
+                </div>
+                <div class="card_bottom">
+                  <div class="card_bottom-author">
+                    <span class="card_avatar img-placeholder"></span>
+                    <span>Gregory Watkins</span>
+                  </div>
+                  <div class="card_bottom-actions">
+                    <a href="" class="card_bottom-action">
+                      <svg
+                        width="16"
+                        height="16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 8c-.0071.7081-.3486 1.375-.9289 1.8141L7.96 14.4957c-.7319.5539-1.729.6606-2.5706.2751C4.548 14.3853 4.009 13.5748 4 12.6816V3.3184c.009-.8932.548-1.7037 1.3894-2.0892C6.231.8437 7.2281.9504 7.96 1.5043l6.1111 4.6816c.5803.439.9218 1.106.9289 1.8141z"
+                          fill="#3E4056"
+                        />
+                      </svg>
+                      <span class="action-counter">88</span>
+                    </a>
+                    <a href="" class="card_bottom-action">
+                      <svg
+                        width="16"
+                        height="14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 8.0933C7.1796 9.2545 5.9078 10 4.48 10 2.0058 10 0 7.7614 0 5s2.0058-5 4.48-5C5.9078 0 7.1796.7455 8 1.9067 8.8204.7455 10.0922 0 11.52 0 13.9942 0 16 2.2386 16 5s-2.0058 5-4.48 5C10.0922 10 8.8204 9.2545 8 8.0933z"
+                          fill="#FB5F8A"
+                        />
+                        <path
+                          d="M8 14c2.7614 0 8-5 8-9H0c0 4 5.2386 9 8 9z"
+                          fill="#FB5F8A"
+                        />
+                      </svg>
+                      <span class="action-counter">24</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article class="card card--withtop">
+                <div class="card_top">
+                  <div class="card_top-share">
+                    <svg class="icon icon--md">
+                      <use xlink:href="/images/dist/icons.svg#link"></use>
+                    </svg>
+                    Shared via weblink
+                  </div>
+                </div>
+                <div class="card_text">
+                  New air routes that promise cheap flights in
+                </div>
+                <div class="card_bottom">
+                  <div class="card_bottom-author">
+                    <span class="card_avatar img-placeholder"></span>
+                    <span>Gregory Watkins</span>
+                  </div>
+                  <div class="card_bottom-actions">
+                    <a href="" class="card_bottom-action">
+                      <svg
+                        width="16"
+                        height="16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 8c-.0071.7081-.3486 1.375-.9289 1.8141L7.96 14.4957c-.7319.5539-1.729.6606-2.5706.2751C4.548 14.3853 4.009 13.5748 4 12.6816V3.3184c.009-.8932.548-1.7037 1.3894-2.0892C6.231.8437 7.2281.9504 7.96 1.5043l6.1111 4.6816c.5803.439.9218 1.106.9289 1.8141z"
+                          fill="#3E4056"
+                        />
+                      </svg>
+                      <span class="action-counter">88</span>
+                    </a>
+                    <a href="" class="card_bottom-action">
+                      <svg
+                        width="16"
+                        height="14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 8.0933C7.1796 9.2545 5.9078 10 4.48 10 2.0058 10 0 7.7614 0 5s2.0058-5 4.48-5C5.9078 0 7.1796.7455 8 1.9067 8.8204.7455 10.0922 0 11.52 0 13.9942 0 16 2.2386 16 5s-2.0058 5-4.48 5C10.0922 10 8.8204 9.2545 8 8.0933z"
+                          fill="#FB5F8A"
+                        />
+                        <path
+                          d="M8 14c2.7614 0 8-5 8-9H0c0 4 5.2386 9 8 9z"
+                          fill="#FB5F8A"
+                        />
+                      </svg>
+                      <span class="action-counter">24</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

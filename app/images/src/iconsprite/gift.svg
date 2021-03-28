@@ -1,0 +1,15 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="share recap" opacity="0.98">
+<rect id="Rectangle 2 Copy 2" opacity="0.01" width="32" height="32" fill="#EFF3F6"/>
+<rect id="Rectangle 10" x="10" y="12" width="12" height="10" rx="2" stroke="#3E4056" stroke-width="2"/>
+<path id="Oval 6 Copy 3" fill-rule="evenodd" clip-rule="evenodd" d="M12.4244 12.4713C13.5056 12.8648 15.4714 12.6274 15.8492 11.5895C16.227 10.5515 14.8737 9.10607 13.7925 8.71254C12.7113 8.31902 11.5286 8.84143 11.1508 9.87939C10.773 10.9173 11.3432 12.0778 12.4244 12.4713Z" stroke="#3E4056" stroke-width="2"/>
+<path id="Oval 6 Copy 4" fill-rule="evenodd" clip-rule="evenodd" d="M19.5756 12.4713C18.4944 12.8648 16.5286 12.6274 16.1508 11.5895C15.773 10.5515 17.1263 9.10607 18.2075 8.71254C19.2887 8.31902 20.4714 8.84143 20.8492 9.87939C21.227 10.9173 20.6568 12.0778 19.5756 12.4713Z" stroke="#3E4056" stroke-width="2"/>
+<rect id="Rectangle 11" x="15" y="12" width="2" height="10" fill="#3E4056"/>
+<g id="Rectangle 11 Copy 2">
+<mask id="path-6-inside-1" fill="white">
+<path d="M8 13C8 11.8954 8.89543 11 10 11H22C23.1046 11 24 11.8954 24 13V16C24 16.5523 23.5523 17 23 17H9C8.44772 17 8 16.5523 8 16V13Z"/>
+</mask>
+<path d="M8 13C8 11.8954 8.89543 11 10 11H22C23.1046 11 24 11.8954 24 13V16C24 16.5523 23.5523 17 23 17H9C8.44772 17 8 16.5523 8 16V13Z" fill="white" stroke="#3E4056" stroke-width="4" mask="url(#path-6-inside-1)"/>
+</g>
+</g>
+</svg>

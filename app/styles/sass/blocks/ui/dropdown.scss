@@ -1,0 +1,51 @@
+$trigger-size: 24px;
+
+.dropdown {
+  position: relative;
+  &_icon {
+    cursor: pointer;
+    display: block;
+    width: $trigger-size;
+    height: $trigger-size;
+    transition: $transition;
+  }
+  &_content {
+    position: absolute;
+    left: calc(100% - $trigger-size);
+    top: 100%;
+    padding-top: 16px;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+  }
+  &_list {
+    min-width: 176px;
+    background-color: rgba(#fff, 0.95);
+    border-radius: 8px;
+    padding: 24px 0;
+    &-item {
+      padding: 8px 24px;
+      font-weight: 600;
+      line-height: 22px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      &-icon {
+        margin-right: 16px;
+      }
+      &:hover {
+        background-color: $higlight;
+        color: inherit;
+      }
+    }
+  }
+  &:hover {
+    .dropdown_icon {
+      color: $accent;
+    }
+    .dropdown_content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+// USER VARIABLES SECTION
+
+$accent: #ed5267; // Accent Color
+$second: #f05d63;
+$third: #ff974f;
+$bg-color: #ecf1f8;
+$placeholder: #b2b3bb;
+$higlight: #ecf1f8;
+$main-gradient: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+$fontsize: 16px; // Body Font Size
+$textcolor: #3e4056; // Text Color
+$lineheight: 1.5; // Document Line Height
+$userfont: opensans, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$transition: all 0.3s ease-in;
+
+// Bootstrap compatible gutter variable => $gutter
+
+$media-lg: 992px;
+$media-md: 786px;
+$media-sm: 576px;
+
+// IMPORT SECTION
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format("woff2");
+  }
+}
+
+@include font("opensans", normal, 400, "../fonts/OpenSans-Regular.woff2");
+@include font("opensans", normal, 600, "../fonts/OpenSans-SemiBold.woff2");
+@include font("opensans", normal, 700, "../fonts/OpenSans-Bold.woff2");
+@include font("montserrat", normal, 400, "../fonts/Montserrat-Regular.woff2");
+@include font("montserrat", normal, 600, "../fonts/Montserrat-SemiBold.woff2");
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+input,
+textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+a {
+  color: $textcolor;
+  text-decoration: none;
+  transition: $transition;
+  &:hover {
+    text-decoration: none;
+    color: $accent;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  background-color: rgba($bg-color, 0.4);
+}
+
+.container {
+  max-width: 1202px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  &--sm {
+    width: 16px;
+    height: 16px;
+  }
+  &--md {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.img-placeholder {
+  display: inline-flex;
+  flex: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: $placeholder;
+}
